@@ -1150,7 +1150,6 @@ ul{
 }
 .courses-page .course{
   overflow: hidden;
-  /* perspective: 2000px; */
 }
 .courses-page .course .cover{
   width: 100%;
@@ -1162,8 +1161,10 @@ ul{
   position: absolute;
   top: 20px;
   left: 20px;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: .7s;
+ -webkit-animation: pic-me 7s linear infinite;
   animation: pic-me 7s linear infinite;
 }
 .courses-page .course .image .instructor{
@@ -1177,7 +1178,8 @@ ul{
   backface-visibility: hidden;
 }
 .courses-page .course .image .back{
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+   transform: rotateY(180deg);
 }
 /*End 3D Effected */
 .courses-page .course .description{
